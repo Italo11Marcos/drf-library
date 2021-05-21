@@ -15,9 +15,10 @@ class AuthorSerializer(serializers.ModelSerializer):
 
 class BookSerializer(serializers.ModelSerializer):
 
+    """
     #Nested Relationship
     author = AuthorSerializer(many=True, read_only=True)
-    
+    """
 
     #HypedLinked Related Field
     """
