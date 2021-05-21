@@ -25,4 +25,9 @@ class BookSerializer(serializers.ModelSerializer):
             'language',
             'num_pages'
         )
+    
+    def validate_language(self, lang):
+        if lang in ['eng', 'pt', 'esp', 'ch', 'du', 'fr', 'it', 'ru']:
+            return lang
+        raise serializers.ValidationError('Language not found')
 
