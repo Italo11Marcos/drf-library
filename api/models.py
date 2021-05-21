@@ -15,10 +15,6 @@ class Book(models.Model):
     language = models.CharField(max_length=5, null=False, blank=False)
     num_pages = models.IntegerField(null=False, blank=False)
 
-    class Meta:
-        verbose_name = 'Author'
-        verbose_name_plural = 'Authors'
-
     def __str__(self):
         return self.title
     
